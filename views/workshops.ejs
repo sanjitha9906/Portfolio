@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<section class="section">
+
+    <h1 class="section-title">Workshops</h1>
+
+    <div class="cert-grid">
+
+        <div class="cert-card">
+            <img src="/images/work1.png" alt="Workshop 1" onclick="openLightbox(this.src)">
+            <h3>Data Science</h3>
+            <button class="view-btn" onclick="openLightbox('/images/work1.png')">View Certificate</button>
+            <div class="course-learnings">
+                <p>Gained practical exposure to data science concepts including data analysis, visualization, and machine learning fundamentals through hands-on sessions conducted by Google at SRMIST, Kattankulathur.</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <img src="/images/work2.png" alt="Workshop 2" onclick="openLightbox(this.src)">
+            <h3>Generative AI</h3>
+            <button class="view-btn" onclick="openLightbox('/images/work2.png')">View Certificate</button>
+            <div class="course-learnings">
+                <p>Explored the world of Generative AI including large language models, prompt engineering, and AI-based content generation through the TeachBot - Epoch 2.0 workshop conducted by Team Aaruush.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Certificate">
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
+<%- include('partials/footer') %>

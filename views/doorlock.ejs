@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password based Door Lock System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">Sanjitha</h1>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail">
+        <div class="project-detail-container">
+
+            <!-- TITLE -->
+            <div class="pd-header">
+                <span class="pd-category">ECE Project</span>
+                <h1>Password based Door Lock System</h1>
+                <p class="pd-subtitle">
+                    A secure electronic locking system that grants access 
+                    only through correct password authentication via a keypad.
+                </p>
+            </div>
+
+            <!-- TECH TAGS -->
+            <div class="pd-tags">
+                <span class="tag">Keypad</span>
+                <span class="tag">Microcontroller</span>
+                <span class="tag">LCD Display</span>
+                <span class="tag">Buzzer</span>
+                <span class="tag">Relay</span>
+                <span class="tag">Door Lock Mechanism</span>
+                <span class="tag">Embedded Systems</span>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="pd-divider"></div>
+
+            <!-- DESCRIPTION -->
+            <div class="pd-description">
+                <p>
+                    Developed a Password Door Lock System to enhance security by 
+                    allowing access only when the correct password is entered through 
+                    a keypad. The system verifies the entered password and controls 
+                    the door locking mechanism automatically, providing secure and 
+                    reliable access control.
+                </p>
+                <p>
+                    Designed and implemented the project using components such as a 
+                    keypad, microcontroller, LCD display, buzzer, relay, and electronic 
+                    door lock mechanism. The system was programmed to display access 
+                    status messages and trigger a warning buzzer for incorrect 
+                    password attempts.
+                </p>
+                <p>
+                    This project provided practical experience in embedded systems, 
+                    keypad interfacing, microcontroller programming, electronic 
+                    security systems, and automation-based applications.
+                </p>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="pd-divider"></div>
+
+            <!-- SLIDER -->
+            <h3 class="pd-gallery-title">Project Gallery</h3>
+
+            <div class="slider">
+                <img src="/images/doorlock1.jpg" class="slide" alt="Door Lock System - 1">
+            </div>
+
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const slides = document.querySelectorAll(".slide");
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.style.display = "none");
+                slides[index].style.display = "block";
+            }
+
+            let autoPlay = setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 2000);
+
+            const slider = document.querySelector(".slider");
+
+            slider.addEventListener("mouseenter", () => {
+                clearInterval(autoPlay);
+            });
+
+            slider.addEventListener("mouseleave", () => {
+                autoPlay = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                }, 2000);
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,37 +1,51 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
 
 const app = express();
-const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.set("view engine", "ejs");
 
-app.set('view engine', 'ejs');
+app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-    res.render('index');
+app.get("/", (req, res) => {
+    res.render("index");
 });
 
-app.get('/about', (req, res) => {
-    res.render('about');
+app.get("/projects", (req, res) => {
+    res.render("projects");
 });
 
-app.get('/projects', (req, res) => {
-    res.render('projects');
+app.get("/blindspot", (req, res) => {
+  res.render("blindspot");
 });
 
-app.get('/skills', (req, res) => {
-    res.render('skills');
+app.get("/carpool", (req, res) => {
+  res.render("carpool");
 });
 
-app.get('/certificates', (req, res) => {
-    res.render('certificates');
+app.get("/doorlock", (req, res) => {
+  res.render("doorlock");
 });
 
-app.get('/contact', (req, res) => {
-    res.render('contact');
+app.get("/hackathons", (req, res) => {
+    res.render("hackathons");
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.get("/courses", (req, res) => {
+    res.render("courses");
+});
+
+app.get("/workshops", (req, res) => {
+    res.render("workshops");
+});
+
+app.get("/about", (req, res) => {
+    res.render("about");
+});
+
+app.get("/contact", (req, res) => {
+    res.render("contact");
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
 });

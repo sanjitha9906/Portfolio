@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Spot Detection System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">Sanjitha</h1>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail">
+        <div class="project-detail-container">
+
+            <!-- TITLE -->
+            <div class="pd-header">
+                <span class="pd-category">ECE Project</span>
+                <h1>Blind Spot Detection System</h1>
+                <p class="pd-subtitle">
+                    A real-time vehicle safety system that detects objects 
+                    in the driver's blind zone and triggers instant alerts.
+                </p>
+            </div>
+
+            <!-- TECH TAGS -->
+            <div class="pd-tags">
+                <span class="tag">Ultrasonic Sensor</span>
+                <span class="tag">555 Timer IC</span>
+                <span class="tag">Comparator</span>
+                <span class="tag">Transistor</span>
+                <span class="tag">LED</span>
+                <span class="tag">Buzzer</span>
+                <span class="tag">Analog Electronics</span>
+            </div>
+
+        
+            <!-- DIVIDER -->
+            <div class="pd-divider"></div>
+
+<!-- DESCRIPTION -->
+<div class="pd-description">
+    <p>
+        Developed a Blind Spot Detection System to improve vehicle 
+        safety by detecting objects or vehicles present in the driver's 
+        blind area. The project used an ultrasonic sensor to continuously 
+        monitor nearby obstacles and provide warning indications through 
+        an LED and buzzer whenever an object entered the danger zone.
+    </p>
+    <p>
+        Designed and implemented the circuit using components such as a 
+        555 Timer IC, comparator, transistor, ultrasonic sensor, LED, 
+        and buzzer. The system was tested through both simulation and 
+        hardware implementation to analyze object detection range and 
+        alert response.
+    </p>
+    <p>
+        This project helped in gaining practical knowledge of sensor 
+        interfacing, analog electronics, comparator circuits, timer 
+        applications, and automotive safety systems.
+    </p>
+</div>
+
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="pd-divider"></div>
+
+            <!-- SLIDER -->
+            <h3 class="pd-gallery-title">Project Gallery</h3>
+
+            <div class="slider">
+                <img src="/images/blindspot1.jpg" class="slide" alt="Blind Spot Detection - 1">
+                <img src="/images/blindspot2.jpg" class="slide" alt="Blind Spot Detection - 2">
+                
+            </div>
+
+        </div>
+
+
+        
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const slides = document.querySelectorAll(".slide");
+            const dots = document.querySelectorAll(".dot");
+            const nextBtn = document.querySelector(".next");
+            const prevBtn = document.querySelector(".prev");
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.style.display = "none");
+                dots.forEach(d => d.classList.remove("active"));
+                slides[index].style.display = "block";
+                dots[index].classList.add("active");
+            }
+
+            window.goToSlide = (index) => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            }
+
+            let autoPlay = setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+            }, 2000);
+
+             const slider = document.querySelector(".slider");
+
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>

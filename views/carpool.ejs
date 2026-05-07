@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Carpooling Passenger App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">Sanjitha</h1>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail">
+        <div class="project-detail-container">
+
+            <!-- TITLE -->
+            <div class="pd-header">
+                <span class="pd-category">App Development</span>
+                <h1>AI Carpooling Passenger App</h1>
+                <p class="pd-subtitle">
+                    A smart ride-sharing platform that connects passengers 
+                    and drivers through AI-based intelligent route matching.
+                </p>
+            </div>
+
+            <!-- TECH TAGS -->
+            <div class="pd-tags">
+                <span class="tag">Android</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Mapbox</span>
+                <span class="tag">AI Matching</span>
+                <span class="tag">Live Tracking</span>
+                <span class="tag">UI/UX Design</span>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="pd-divider"></div>
+
+            <!-- DESCRIPTION -->
+            <div class="pd-description">
+                <p>
+                    Developed an AI-based Carpooling Application called "Vibe Ride" 
+                    to provide a smart and efficient ride-sharing platform for users 
+                    traveling in similar routes. The application helps reduce travel 
+                    costs, traffic congestion, and fuel consumption by connecting 
+                    passengers and drivers through intelligent ride matching.
+                </p>
+                <p>
+                    Designed the application with features such as user authentication, 
+                    ride booking, live location tracking, route optimization, and 
+                    AI-based ride recommendations. The system focuses on improving 
+                    travel convenience, safety, and efficient transportation management 
+                    through a user-friendly interface.
+                </p>
+                <p>
+                    This project provided practical experience in application development, 
+                    AI-based recommendation systems, database management, UI/UX design, 
+                    and smart transportation technologies.
+                </p>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="pd-divider"></div>
+
+            <!-- SLIDER -->
+            <h3 class="pd-gallery-title">Project </h3>
+
+            <div class="slider">
+                <img src="/images/carpoold1.jpg" class="slide" alt="Carpool App - 1">
+                <img src="/images/carpoold2.jpg" class="slide" alt="Carpool App - 2">
+                <img src="/images/carpoold3.jpg" class="slide" alt="Carpool App - 3">
+                <img src="/images/carpoold4.jpg" class="slide" alt="Carpool App - 4">
+                <img src="/images/carpoold5.jpg" class="slide" alt="Carpool App - 5">
+                <img src="/images/carpoold6.jpg" class="slide" alt="Carpool App - 6">
+            </div>
+
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const slides = document.querySelectorAll(".slide");
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.style.display = "none");
+                slides[index].style.display = "block";
+            }
+
+            let autoPlay = setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 2000);
+
+            const slider = document.querySelector(".slider");
+
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>

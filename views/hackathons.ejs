@@ -1,0 +1,147 @@
+<%- include('partials/header') %>
+
+<section class="section">
+
+    <h1 class="section-title">Hackathons</h1>
+
+    <div class="cert-grid">
+
+        <!-- HACKATHON 1 -->
+        <div class="cert-card">
+            <img src="/images/hack1.png" alt="OssomeHacks 3.0"  onclick="openLightbox(this.src)">
+            <h3>OssomeHacks 3.0</h3>
+            <button class="view-btn" onclick="toggleDetails('hack1')">View Details</button>
+            <div class="cert-details" id="hack1">
+                <div class="detail-item">
+                    <span class="detail-label">🏆 Event</span>
+                    <span>OssomeHacks 3.0 </span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💡 Project</span>
+                    <span> AI Career Copilot for Students Tagline</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📌 What We Did</span>
+                    <span>Developed an AI Career Copilot for Students to help users explore career paths, skill development, and learning opportunities through AI-based guidance. The system provides personalized career recommendations and insights to support smarter academic and professional decisions.
+> </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HACKATHON 2 -->
+        <div class="cert-card">
+            <img src="/images/hack2.png" alt="HackTrax 2.0"  onclick="openLightbox(this.src)">
+            <h3>HackTrax 2.0</h3>
+            <button class="view-btn" onclick="toggleDetails('hack2')">View Details</button>
+            <div class="cert-details" id="hack2">
+                <div class="detail-item">
+                    <span class="detail-label">🏆 Event</span>
+                    <span>HackTrax 2.0</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💡 Project</span>
+                    <span>Price-Ghost: The Privacy-First Price Tracker</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📌 What We Did</span>
+                    <span>Developed “Price-Ghost,” a privacy-first e-commerce price tracking system that helps users monitor product prices and receive alerts without compromising personal data. The project focused on secure price tracking, smart deal monitoring, and improving online shopping experience through user privacy and automation.
+</span>
+                </div>
+  
+            </div>
+        </div>
+
+        <!-- HACKATHON 3 -->
+        <div class="cert-card">
+            <img src="/images/hack3.png" alt="TechSprint 2026"  onclick="openLightbox(this.src)">
+            <h3>TechSprint 2026</h3>
+            <button class="view-btn" onclick="toggleDetails('hack3')">View Details</button>
+            <div class="cert-details" id="hack3">
+                <div class="detail-item">
+                    <span class="detail-label">🏆 Event</span>
+                    <span>TechSprint 2026</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💡 Project</span>
+                    <span>Small businesses struggle to track inventory and get quick insights.</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📌 What We Did</span>
+                    <span>Developed a smart inventory management solution for small businesses to simplify stock tracking and provide quick business insights. The system focused on improving inventory monitoring, reducing manual work, and helping businesses make faster data-driven decisions.
+</span>
+                </div>
+               
+            </div>
+        </div>
+
+        <!-- HACKATHON 4 -->
+        <div class="cert-card">
+            <img src="/images/hack4.png" alt="Hackathon 10.0"  onclick="openLightbox(this.src)">
+            <h3>Hackathon 10.0</h3>
+            <button class="view-btn" onclick="toggleDetails('hack4')">View Details</button>
+            <div class="cert-details" id="hack4">
+                <div class="detail-item">
+                    <span class="detail-label">🏆 Event</span>
+                    <span>Hackathon 10.0</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💡 Project</span>
+                    <span>Healthcare & IoT/AI Safety Systems</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📌 What We Did</span>
+                    <span>Developed a Healthcare & IoT/AI Safety System for elderly people to monitor health conditions and provide real-time emergency alerts using smart sensors and AI-based monitoring. The project focused on improving elderly safety through IoT technology, health tracking, and automated alert systems.
+         </span>            
+          </div>
+               
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    function toggleDetails(id) {
+        const details = document.getElementById(id);
+        const isOpen = details.classList.contains('open');
+
+        // Close all first
+        document.querySelectorAll('.cert-details').forEach(d => {
+            d.classList.remove('open');
+        });
+
+        document.querySelectorAll('.view-btn').forEach(b => {
+            b.textContent = 'View Details';
+        });
+
+        // Open clicked one if it was closed
+        if (!isOpen) {
+            details.classList.add('open');
+            details.previousElementSibling.textContent = 'Hide Details';
+        }
+    }
+
+      function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+</script>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Certificate">
+</div>
+
+<%- include('partials/footer') %>

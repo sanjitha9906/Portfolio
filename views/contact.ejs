@@ -1,25 +1,71 @@
 <%- include('partials/header') %>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <section class="section">
 
-    <h1 class="section-title">
-        Contact
-    </h1>
+    <div class="about-container">
 
-    <div class="contact-icons">
+        <!-- TITLE -->
+        <div class="pd-header">
+            <span class="pd-category">Get In Touch</span>
+            <h1 class="about-title">Contact <span>Me</span></h1>
+            <p class="pd-subtitle">
+                Feel free to reach out for collaborations, internships, 
+                or just a friendly hello!
+            </p>
+        </div>
 
-        <a href="https://www.linkedin.com/in/sanjitha-s-7b683732b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCHd989ONT3eq38efTyO8qA%3D%3D">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
+        <div class="pd-divider"></div>
 
-        <a href="http://github.com/sanjitha_s">
-            <i class="fa-brands fa-github"></i>
-        </a>
+        <!-- CONTACT CARDS -->
+        <div class="contact-grid">
 
-           <a
-        href="mailto:sanjitha9906@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
+            <a href="https://www.linkedin.com/in/sanjitha-s-7b683732b/" 
+               target="_blank" class="contact-card">
+                <div class="contact-icon linkedin-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="contact-info">
+                    <h4>LinkedIn</h4>
+                    <p>sanjitha-s</p>
+                    <span>Connect with me </span>
+                </div>
+            </a>
+
+            <a href="https://github.com/sanjitha-s" 
+               target="_blank" class="contact-card">
+                <div class="contact-icon github-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-info">
+                    <h4>GitHub</h4>
+                    <p>sanjitha_s</p>
+                    <span>View my work </span>
+                </div>
+            </a>
+
+            <a href="mailto:sanjitha9906@gmail.com" 
+               class="contact-card">
+                <div class="contact-icon email-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <h4>Email</h4>
+                    <p>sanjitha9906@gmail.com</p>
+                    <span>Send a message </span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="pd-divider"></div>
+
+        <!-- AVAILABILITY -->
+        <div class="contact-availability">
+            <div class="availability-dot"></div>
+            <p>Currently available for internships and project collaborations</p>
+        </div>
 
     </div>
 
