@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get('/home', (req, res) => {
+    res.render('index');
+});
+
 app.get("/projects", (req, res) => {
     res.render("projects");
 });
@@ -29,6 +33,23 @@ app.get("/doorlock", (req, res) => {
 app.get("/hackathons", (req, res) => {
     res.render("hackathons");
 });
+
+app.get('/ossomehacks', (req, res) => {
+    res.render('ossomehacks');
+});
+
+app.get('/hacktrax', (req, res) => {
+    res.render('hacktrax');
+});
+
+app.get('/techsprint', (req, res) => {
+    res.render('techsprint');
+});
+
+app.get('/hackathon10', (req, res) => {
+    res.render('hackathon10');
+});
+
 
 app.get("/courses", (req, res) => {
     res.render("courses");
